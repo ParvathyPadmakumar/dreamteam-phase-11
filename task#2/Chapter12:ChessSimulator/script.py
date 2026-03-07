@@ -1,0 +1,71 @@
+import sys, copy
+default= {'a8': 'bR', 'b8': 'bN', 'c8': 'bB', 'd8': 'bQ',
+'e8': 'bK', 'f8': 'bB', 'g8': 'bN', 'h8': 'bR', 'a7': 'bP', 'b7': 'bP',
+'c7': 'bP', 'd7': 'bP', 'e7': 'bP', 'f7': 'bP', 'g7': 'bP', 'h7': 'bP',
+'a1': 'wR', 'b1': 'wN', 'c1': 'wB', 'd1': 'wQ', 'e1': 'wK', 'f1': 'wB',
+'g1': 'wN', 'h1': 'wR', 'a2': 'wP', 'b2': 'wP', 'c2': 'wP', 'd2': 'wP',
+'e2': 'wP', 'f2': 'wP', 'g2': 'wP', 'h2': 'wP'}
+base="""
+    a    b    c    d    e    f    g    h
+   ____ ____ ____ ____ ____ ____ ____ ____
+  ||||||    ||||||    ||||||    ||||||    |
+8 ||{}|| {} ||{}|| {} ||{}|| {} ||{}|| {} |
+  ||||||____||||||____||||||____||||||____|
+  |    ||||||    ||||||    ||||||    ||||||
+7 | {} ||{}|| {} ||{}|| {} ||{}|| {} ||{}||
+  |____||||||____||||||____||||||____||||||
+  ||||||    ||||||    ||||||    ||||||    |
+6 ||{}|| {} ||{}|| {} ||{}|| {} ||{}|| {} |
+  ||||||____||||||____||||||____||||||____|
+  |    ||||||    ||||||    ||||||    ||||||
+5 | {} ||{}|| {} ||{}|| {} ||{}|| {} ||{}||
+  |____||||||____||||||____||||||____||||||
+  ||||||    ||||||    ||||||    ||||||    |
+4 ||{}|| {} ||{}|| {} ||{}|| {} ||{}|| {} |
+  ||||||____||||||____||||||____||||||____|
+  |    ||||||    ||||||    ||||||    ||||||
+3 | {} ||{}|| {} ||{}|| {} ||{}|| {} ||{}||
+  |____||||||____||||||____||||||____||||||
+  ||||||    ||||||    ||||||    ||||||    |
+2 ||{}|| {} ||{}|| {} ||{}|| {} ||{}|| {} |
+  ||||||____||||||____||||||____||||||____|
+  |    ||||||    ||||||    ||||||    ||||||
+1 | {} ||{}|| {} ||{}|| {} ||{}|| {} ||{}||
+  |____||||||____||||||____||||||____||||||
+
+"""
+WHITE="||"
+BLACK="  "
+def chessboard(board):
+	box=[]
+	white=True
+	for y in '87654321':
+		for x in 'abcdefgh':
+			if x+y in board.keys():
+				box.append(board[x+y])#a8,a7,etc
+			else:
+				if white:
+					box.append(WHITE)
+				else:
+					box.append(BLACK)
+			white=not white#alternate boxes
+		white=not white#alternate colours in rows
+	print(base.format(*box))
+print("Chess Simulator")
+print("P=PAWN,N=KNIGHT,B=BISHOP,R=ROOK,Q=QUEEN,K=KING")
+print("w=WHITE b=BLACK")
+print("eg commands:\nreset\nmove g5 g7\nquit")
+
+game=copy.copy(default)
+while True:
+    chessboard(game)
+    response=input('> ').split()
+    if not response:
+        continue
+    if response[0]=='move':
+        game[response[2]]=game[response[1]]
+        del game[response[1]]
+    elif response[0]=='reset':
+        game=copy.copy(default)
+    elif response[0]=='quit':
+        sys.exit()
