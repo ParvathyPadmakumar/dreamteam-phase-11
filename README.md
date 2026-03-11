@@ -1,14 +1,14 @@
 # About Me
 
-I'm Parvathy Padmakumar currently in semester 4 cse batch. 
-Areas of interest : AI and ML, Cybersecurity, Real-world projects, Quantum safe architectures
-Fields I've been working on: Trnasformer architecture, LLM, RAG, Neural networks, BART, PEGASUS, muril, Computer Vision, yolo, Hyperparameter tuning
+I'm Parvathy Padmakumar currently in semester 4 cse batch.   
+Areas of interest : AI and ML, Cybersecurity, Real-world projects, Quantum safe architectures  
+Fields I've been working on: Trnasformer architecture, LLM, RAG, Neural networks, BART, PEGASUS, muril, Computer Vision, yolo, Hyperparameter tuning  
 
 # Full-stack Projects
 
-1.SAFHER
+1.SAFHER  
 
-safety-focused routing application that helps users find the safest paths from source to destination by analyzing:
+safety-focused routing application that helps users find the safest paths from source to destination by analyzing:  
 
     Real-time Traffic Data from TomTom
     CCTV Coverage from OpenStreetMap
