@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys, copy
 default= {'a8': 'bR', 'b8': 'bN', 'c8': 'bB', 'd8': 'bQ',
 'e8': 'bK', 'f8': 'bB', 'g8': 'bN', 'h8': 'bR', 'a7': 'bP', 'b7': 'bP',
