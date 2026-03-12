@@ -1,10 +1,10 @@
 # About Me
 
-I'm Parvathy Padmakumar currently in semester 4 cse batch.   
+I'm Parvathy Padmakumar currently in Semester 4 CSE batch.   
 Areas of interest : AI and ML, Cybersecurity, Real-world projects, Quantum safe architectures  
-Fields I've been working on: Trnasformer architecture, LLM, RAG, Neural networks, BART, PEGASUS, muril, Computer Vision, yolo, Hyperparameter tuning  
+Fields I've been working on: Transformer architecture, LLM, RAG, Neural networks, BART, PEGASUS, muril, Computer Vision, yolo, Hyperparameter tuning  
 
-# Full-stack Projects
+# My Full-stack Projects 
 
 1.SAFHER  
 
